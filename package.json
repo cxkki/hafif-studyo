@@ -1,0 +1,23 @@
+{
+  "name": "hafif-studyo",
+  "version": "3.0.0",
+  "description": "Lightweight desktop studio for 3D modelling, video editing and web building, with live AI agents",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "dist": "node build.mjs && node tools/package.mjs",
+    "i18n": "node tools/i18n-extract.mjs"
+  },
+  "devDependencies": {
+    "@neutralinojs/lib": "^6.10.0",
+    "@neutralinojs/neu": "^11.8.0",
+    "esbuild": "^0.24.0",
+    "three": "^0.170.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0"
+  }
+}

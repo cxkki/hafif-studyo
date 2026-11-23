@@ -1,0 +1,13 @@
+{
+  "type": "web",
+  "name": "web-site-yapilis",
+  "site": "site-ornek",
+  "entry": "index.html",
+  "orientation": "vertical",
+  "agents": { "count": 20, "speed": "1x" },
+  "intro": "Sayfa taranıyor...",
+  "hold": 2,
+  "tour": true,
+  "music": { "file": "medya/muzik.mp3", "volume": 0.6 },
+  "output": { "file": "web-site-yapilis.mp4" }
+}

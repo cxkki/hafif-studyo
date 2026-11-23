@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kıvılcım · Küçük ekipler için proje panosu</title>
+<meta name="description" content="Kıvılcım: fikirden yayına tek bir panoda. Görevler, dosyalar ve geri bildirim aynı yerde.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#">
+    <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1b1f2a"/><path d="M17.5 5 9 18h6l-1.5 9L23 13h-6.2z" fill="#ff5a36"/></svg>
+    Kıvılcım
+  </a>
+  <nav class="nav">
+    <a href="#ozellikler">Özellikler</a>
+    <a href="#uc-boyut">Nasıl çalışır</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <a class="btn btn-sm" href="#iletisim">Ücretsiz dene</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge">Yeni · Sürüm 2.0</span>
+      <h1>Fikirden yayına, tek bir panoda.</h1>
+      <p class="lead">Görevler, dosyalar ve geri bildirim aynı yerde. Kıvılcım, küçük ekiplerin toplantıya değil işe vakit ayırması için tasarlandı.</p>
+      <div class="actions">
+        <a class="btn" href="#iletisim">Hemen başla</a>
+        <a class="btn btn-ghost" href="#uc-boyut">Nasıl çalışır?</a>
+      </div>
+    </div>
+    <img class="hero-img" src="gorsel/pano.svg" width="560" height="400" alt="Kıvılcım proje panosunun ekran görüntüsü">
+  </section>
+
+  <section class="features" id="ozellikler">
+    <h2>Ekibin ihtiyacı olan her şey</h2>
+    <p class="sub">Karmaşık ayarlar yok. Beş dakikada kur, aynı gün kullanmaya başla.</p>
+    <div class="cards">
+      <article class="card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="2"/><rect x="14" y="4" width="7" height="10" rx="2"/></svg>
+        <h3>Sürükle-bırak pano</h3>
+        <p>İşleri sütunlar arasında taşı; kim ne yapıyor tek bakışta gör.</p>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="17" r="3"/></svg>
+        <h3>Akıllı hatırlatmalar</h3>
+        <p>Teslim tarihi yaklaşan işler sabah özetinde seni bekler.</p>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4z"/></svg>
+        <h3>Satır içi yorumlar</h3>
+        <p>Geri bildirimi dosyanın tam üstüne bırak; e-posta trafiği biter.</p>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Güvenli paylaşım</h3>
+        <p>Müşterilere yalnızca görmeleri gereken panoyu aç, gerisi kapalı kalsın.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="scene" id="uc-boyut">
+    <div class="scene-text">
+      <h2>Her proje bir küp gibi: altı yüz, tek bütün.</h2>
+      <p>Plan, tasarım, kod, test, yayın ve geri bildirim. Kıvılcım hepsini aynı yapıda tutar, hiçbir yüz gözden kaçmaz.</p>
+      <ul class="steps">
+        <li><b>1</b> Panoyu şablondan oluştur</li>
+        <li><b>2</b> Ekibi bağlantıyla davet et</li>
+        <li><b>3</b> İlk sürümü bugün yayınla</li>
+      </ul>
+    </div>
+    <div class="cube-wrap" aria-hidden="true">
+      <div class="cube">
+        <div class="face f1">Plan</div>
+        <div class="face f2">Tasarım</div>
+        <div class="face f3">Kod</div>
+        <div class="face f4">Test</div>
+        <div class="face f5">Yayın</div>
+        <div class="face f6">Geri bildirim</div>
+      </div>
+      <div class="cube-shadow"></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong>12.400</strong><span>aktif ekip</span></div>
+    <div class="stat"><strong>%38</strong><span>daha az toplantı</span></div>
+    <div class="stat"><strong>4,9</strong><span>kullanıcı puanı</span></div>
+    <div class="stat"><strong>7/24</strong><span>Türkçe destek</span></div>
+  </section>
+
+  <section class="contact" id="iletisim">
+    <div class="contact-text">
+      <h2>Ekibini bugün başlat</h2>
+      <p>İlk 30 gün ücretsiz. Kredi kartı gerekmez; formu doldur, kurulum bağlantısı e-postana gelsin.</p>
+    </div>
+    <form class="form" id="form" novalidate>
+      <label for="ad">Adın</label>
+      <input id="ad" name="ad" type="text" placeholder="Ayşe Yılmaz" autocomplete="name">
+      <label for="eposta">E-posta</label>
+      <input id="eposta" name="eposta" type="email" placeholder="ayse@ornek.com" autocomplete="email">
+      <label for="mesaj">Ekibin ne üzerinde çalışıyor?</label>
+      <textarea id="mesaj" name="mesaj" rows="3" placeholder="Kısaca anlat…"></textarea>
+      <button class="btn" type="submit">Kurulum bağlantısı gönder</button>
+      <p class="form-note" id="not" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-brand">
+    <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#ff5a36"/><path d="M17.5 5 9 18h6l-1.5 9L23 13h-6.2z" fill="#fff"/></svg>
+    <span>Kıvılcım</span>
+  </div>
+  <p>© <span id="yil">2026</span> Kıvılcım Yazılım. İstanbul'da sevgiyle yapıldı.</p>
+  <nav class="foot-nav">
+    <a href="#ozellikler">Özellikler</a>
+    <a href="#iletisim">İletişim</a>
+    <a href="#">Gizlilik</a>
+  </nav>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

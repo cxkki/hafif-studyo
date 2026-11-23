@@ -1,0 +1,7 @@
+{
+  "type": "web",
+  "name": "web-acilis",
+  "site": "site",
+  "entry": "index.html",
+  "orientation": "vertical"
+}

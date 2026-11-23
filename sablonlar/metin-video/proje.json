@@ -1,0 +1,21 @@
+{
+  "type": "video",
+  "name": "metin-video",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "background": "#0b0d1a",
+  "agents": { "show": true, "count": 8, "speed": "2x" },
+  "media": {
+    "arka": "medya/arka.png",
+    "muzik": "medya/muzik.mp3"
+  },
+  "clips": [
+    { "id": "c1", "media": "arka", "track": "v1", "start": 0, "duration": 10, "fit": "cover", "fadeIn": 0.6, "fadeOut": 0.8 }
+  ],
+  "texts": [
+    { "id": "t1", "text": "Every big thing\nstarts with\na small step.", "start": 0.8, "duration": 8.4, "size": 8, "color": "#f5f1e8", "stroke": false, "anim": "type", "y": -0.06, "fadeOut": 0.6 },
+    { "id": "t2", "text": "— Hafif Stüdyo", "start": 4.2, "duration": 5, "size": 4, "color": "#c9b8ff", "stroke": false, "anim": "slide", "y": 0.2, "fadeIn": 0.3, "fadeOut": 0.6 }
+  ],
+  "music": { "media": "muzik", "volume": 0.6, "fadeIn": 0.8, "fadeOut": 2 },
+  "output": { "file": "metin-video.mp4" }
+}

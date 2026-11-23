@@ -1,0 +1,23 @@
+node_modules/
+bin/
+dist/
+dist-web/
+_ref/
+.tmp/
+.storage/
+neutralinojs.log
+resources/index.html
+resources/js/neutralino.js
+resources/sablonlar/
+resources/locales/
+*.log
+.claude/
+
+# Personal test checklist (local paths)
+docs/test-listesi.html
+
+# Neutralino sample-app leftovers (not used by the app)
+resources/index.orig.html
+resources/styles.css
+resources/js/main.js
+resources/js/neutralino.d.ts

@@ -1,0 +1,17 @@
+{
+  "type": "3d",
+  "name": "urun-3d",
+  "agents": { "show": true, "count": 8, "speed": "2x" },
+  "scene": { "background": "#14161c", "grid": false, "shadows": true, "light": 2.0, "ambient": 1.0 },
+  "camera": { "position": [3.4, 2.6, 4.8], "target": [0, 0.9, 0], "fov": 40 },
+  "objects": [
+    { "id": "o1", "shape": "plane", "name": "Floor", "position": [0, 0, 0], "scale": 3, "color": "#1a1d24", "roughness": 0.9 },
+    { "id": "o2", "shape": "cylinder", "name": "Pedestal", "position": [0, 0.15, 0], "scale": [2.2, 0.3, 2.2], "color": "#e9e6df", "metalness": 0.05, "roughness": 0.6, "detail": 48 },
+    { "id": "o3", "shape": "cylinder", "name": "Pedestal ring", "position": [0, 0.31, 0], "scale": [2.26, 0.02, 2.26], "color": "#4f8cff", "metalness": 0.8, "roughness": 0.25, "detail": 48 },
+    { "id": "o4", "shape": "cube", "name": "Product box", "position": [0, 0.92, 0], "rotation": [0, 30, 0], "scale": 1.2, "color": "#ffffff", "metalness": 0.1, "roughness": 0.45, "texture": "medya/logo.png" }
+  ],
+  "outputs": [
+    { "kind": "png", "file": "urun-3d.png", "width": 1920, "height": 1080 },
+    { "kind": "spin", "file": "urun-3d-donen.mp4", "seconds": 6, "width": 1080, "height": 1920, "fps": 30, "turns": 1 }
+  ]
+}

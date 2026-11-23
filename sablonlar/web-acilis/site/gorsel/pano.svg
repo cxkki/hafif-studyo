@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a59"/>
+      <stop offset="1" stop-color="#ff5a36"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="400" rx="18" fill="#ffffff"/>
+  <rect width="560" height="40" rx="18" fill="#1b1f2a"/>
+  <rect y="22" width="560" height="18" fill="#1b1f2a"/>
+  <circle cx="24" cy="20" r="5" fill="#ff5a36"/>
+  <circle cx="42" cy="20" r="5" fill="#ffb547"/>
+  <circle cx="60" cy="20" r="5" fill="#1fa58f"/>
+  <rect x="200" y="12" width="160" height="16" rx="8" fill="#2c3242"/>
+  <rect x="0" y="40" width="112" height="360" fill="#f6f1ea"/>
+  <rect x="16" y="60" width="80" height="10" rx="5" fill="#1b1f2a"/>
+  <rect x="16" y="88" width="64" height="8" rx="4" fill="#cfc6b8"/>
+  <rect x="16" y="108" width="72" height="8" rx="4" fill="#cfc6b8"/>
+  <rect x="16" y="128" width="56" height="8" rx="4" fill="#cfc6b8"/>
+  <rect x="12" y="150" width="88" height="22" rx="7" fill="#ffe7df"/>
+  <rect x="20" y="157" width="52" height="8" rx="4" fill="#e8461f"/>
+  <text x="132" y="74" font-size="15" font-weight="700" fill="#1b1f2a">Sprint 14</text>
+  <text x="132" y="92" font-size="11" fill="#7a8194">3 days left · 12 tasks</text>
+  <rect x="452" y="60" width="88" height="28" rx="14" fill="url(#g)"/>
+  <text x="496" y="78" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">+ New task</text>
+  <g font-size="10" font-weight="700" fill="#7a8194">
+    <text x="132" y="122">TO DO</text>
+    <text x="270" y="122">IN PROGRESS</text>
+    <text x="408" y="122">DONE</text>
+  </g>
+  <g>
+    <rect x="132" y="132" width="126" height="62" rx="10" fill="#fbf7f1" stroke="#e7dfd3"/>
+    <rect x="142" y="144" width="86" height="8" rx="4" fill="#1b1f2a"/>
+    <rect x="142" y="158" width="60" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="142" y="174" width="36" height="12" rx="6" fill="#efeafd"/>
+    <circle cx="242" cy="180" r="7" fill="#7c5cff"/>
+    <rect x="132" y="202" width="126" height="62" rx="10" fill="#fbf7f1" stroke="#e7dfd3"/>
+    <rect x="142" y="214" width="96" height="8" rx="4" fill="#1b1f2a"/>
+    <rect x="142" y="228" width="70" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="142" y="244" width="36" height="12" rx="6" fill="#ffe7df"/>
+    <circle cx="242" cy="250" r="7" fill="#ff5a36"/>
+    <rect x="132" y="272" width="126" height="62" rx="10" fill="#fbf7f1" stroke="#e7dfd3"/>
+    <rect x="142" y="284" width="74" height="8" rx="4" fill="#1b1f2a"/>
+    <rect x="142" y="298" width="90" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="142" y="314" width="36" height="12" rx="6" fill="#dff3ef"/>
+    <circle cx="242" cy="320" r="7" fill="#127a6a"/>
+  </g>
+  <g>
+    <rect x="270" y="132" width="126" height="84" rx="10" fill="#ffffff" stroke="#ff5a36" stroke-width="2"/>
+    <rect x="280" y="144" width="90" height="8" rx="4" fill="#1b1f2a"/>
+    <rect x="280" y="158" width="100" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="280" y="170" width="70" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="280" y="190" width="100" height="6" rx="3" fill="#f1ece4"/>
+    <rect x="280" y="190" width="64" height="6" rx="3" fill="#ff5a36"/>
+    <rect x="270" y="224" width="126" height="62" rx="10" fill="#fbf7f1" stroke="#e7dfd3"/>
+    <rect x="280" y="236" width="80" height="8" rx="4" fill="#1b1f2a"/>
+    <rect x="280" y="250" width="56" height="6" rx="3" fill="#cfc6b8"/>
+    <rect x="280" y="266" width="36" height="12" rx="6" fill="#efeafd"/>
+    <circle cx="380" cy="272" r="7" fill="#ffb547"/>
+  </g>
+  <g>
+    <rect x="408" y="132" width="132" height="62" rx="10" fill="#f3fbf9" stroke="#bfe5dd"/>
+    <rect x="418" y="144" width="80" height="8" rx="4" fill="#127a6a"/>
+    <rect x="418" y="158" width="100" height="6" rx="3" fill="#bfe5dd"/>
+    <path d="m514 178 6 6 10-12" fill="none" stroke="#127a6a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="408" y="202" width="132" height="132" rx="10" fill="#1b1f2a"/>
+    <text x="420" y="224" font-size="10" font-weight="700" fill="#c4c9d6">WEEKLY PROGRESS</text>
+    <g fill="#ff5a36">
+      <rect x="422" y="282" width="14" height="34" rx="3" fill="#3c4458"/>
+      <rect x="442" y="266" width="14" height="50" rx="3" fill="#3c4458"/>
+      <rect x="462" y="274" width="14" height="42" rx="3" fill="#3c4458"/>
+      <rect x="482" y="250" width="14" height="66" rx="3"/>
+      <rect x="502" y="240" width="14" height="76" rx="3" fill="#ffb39f"/>
+    </g>
+  </g>
+  <rect x="132" y="350" width="408" height="30" rx="10" fill="#f6f1ea"/>
+  <circle cx="150" cy="365" r="8" fill="#7c5cff"/>
+  <rect x="166" y="361" width="210" height="8" rx="4" fill="#cfc6b8"/>
+  <rect x="480" y="358" width="50" height="14" rx="7" fill="#127a6a"/>
+</svg>

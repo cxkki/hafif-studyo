@@ -1,0 +1,93 @@
+/* ---------- video editor additions (video-mode.js): effects, transitions, shapes, track headers, markers, export ---------- */
+
+/* toolbar shape menu */
+.vmenu{position:fixed;z-index:80;min-width:190px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px;box-shadow:0 10px 30px #0008;display:flex;flex-direction:column;gap:2px}
+.vmenu[hidden]{display:none}
+.vmenu button{display:flex;align-items:center;gap:10px;border:0;background:transparent;text-align:left;padding:7px 10px}
+.vmenu button:hover{background:var(--panel2)}
+.vsh{width:22px;height:14px;flex:none;background:var(--acc)}
+.vsh-rounded{border-radius:5px}
+.vsh-circle{width:14px;margin:0 4px;border-radius:50%}
+.vsh-bar{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--acc) 60%,#4f8cff40 60%)}
+.vsh-lower{height:9px;border-radius:3px;background:#111827;box-shadow:inset 3px 0 var(--acc)}
+
+/* properties panel */
+.vprops .row.vrow{grid-template-columns:78px minmax(0,1fr) 34px}
+.vprops .row output{font-size:11px;color:var(--dim);text-align:right;font-variant-numeric:tabular-nums}
+.vsec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px}
+.vsec>summary::-webkit-details-marker{display:none}
+.vsec>summary::before{content:"";width:0;height:0;border:4px solid transparent;border-left:5px solid var(--dim);margin:0 0 8px;transition:transform .15s}
+.vsec[open]>summary::before{transform:rotate(90deg) translate(2px,2px)}
+.vsec>summary h3{flex:1}
+.vsec:not([open])>summary h3{margin-bottom:0}
+.vsec:not([open])>summary::before{margin-bottom:0}
+.vhint{margin:2px 0 6px;font-size:11px}
+.vlooks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-bottom:8px}
+.vlooks button{padding:5px 4px;font-size:11px;overflow:hidden;text-overflow:ellipsis}
+.vlooks button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.vlook{position:relative;padding-top:13px!important}
+.vlook::before{content:"";position:absolute;left:4px;right:4px;top:4px;height:5px;border-radius:3px}
+.vlook-cinematic::before{background:linear-gradient(90deg,#1b2735,#c08a52,#1b2735)}
+.vlook-warm::before{background:linear-gradient(90deg,#f3a05c,#ffd38a)}
+.vlook-cool::before{background:linear-gradient(90deg,#5aa0e8,#9fe0f0)}
+.vlook-bw::before{background:linear-gradient(90deg,#222,#ddd)}
+.vlook-vintage::before{background:linear-gradient(90deg,#7a5a3a,#d9c09a)}
+.vlook-vivid::before{background:linear-gradient(90deg,#ff3d7f,#ffd400,#00d4a0)}
+.vmo-head,.vmo{display:grid;grid-template-columns:40px repeat(4,minmax(0,1fr));gap:4px;align-items:center;margin-bottom:5px}
+.vmo-head i{font-style:normal;font-size:10px;color:var(--dim);text-align:center}
+.vmo span{color:var(--dim);font-size:12px}
+.vmo input{padding:3px 4px;font-size:11px}
+.vspeed{margin:-2px 0 6px 84px;gap:4px}
+.vspeed button,.vprops .btns button.on{padding:3px 8px;font-size:11px}
+.vprops .btns button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.vkeys{margin:0;line-height:1.8}
+.vkeys b{font-family:Consolas,monospace;font-weight:500;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--ink)}
+
+/* track headers: label + mute / hide / lock buttons */
+.tl-heads .vth{flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:0 8px}
+.vth-btns{display:flex;gap:3px}
+.vth-b{width:22px;height:18px;padding:0;display:grid;place-items:center;border-radius:4px;color:var(--dim);background:transparent;border-color:transparent}
+.vth-b svg{width:13px;height:13px}
+.vth-b:hover{background:var(--panel2);border-color:var(--line)}
+.vth-b.on{color:#fff;background:#e5534b;border-color:#e5534b}
+.vth-b.on[data-flag="hide"]{background:#6b7280;border-color:#6b7280}
+.vth-b.on[data-flag="lock"]{background:#b7791f;border-color:#b7791f}
+.track.vt-hide .clip{opacity:.35}
+.track.vt-mute .clip.k-audio,.track.vt-mute .clip.k-video{filter:saturate(.3)}
+.track.vt-lock{background:repeating-linear-gradient(135deg,#ffffff06 0 6px,transparent 6px 12px)}
+.track.vt-lock .clip{cursor:not-allowed}
+
+/* clips: shapes, transition wedge, badges */
+.clip.k-shape{background-color:#3d4654;background-image:linear-gradient(90deg,var(--shc,#4f8cff) 0 6px,transparent 6px)}
+.clip .vtr{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#ffffff66,#ffffff10);clip-path:polygon(0 0,100% 50%,0 100%);pointer-events:none}
+.clip .vbadges{position:absolute;right:10px;bottom:3px;display:flex;gap:3px;pointer-events:none}
+.clip .vbadges b{font-size:9px;font-weight:700;line-height:12px;padding:0 4px;border-radius:3px;background:#000a;color:#fff}
+
+/* draw clips (kind "draw"): timeline colour, error mark, code editor in the panel */
+.clip.k-draw{background-color:#2c2350;background-image:linear-gradient(90deg,#ff3df2 0 3px,#00e5ff 3px 6px,transparent 6px)}
+.clip.verr{border-color:#e5534b;box-shadow:inset 0 0 0 1px #e5534b}
+.clip.verr .vbadges b:first-child{background:#e5534b}
+.vdraw .vdraw-code{min-height:220px;max-height:60vh;font:12px/1.45 Consolas,"Cascadia Mono",monospace;white-space:pre;overflow:auto;tab-size:2;margin:2px 0 6px}
+.vdraw-err{margin:0 0 6px;padding:6px 8px;border-radius:5px;background:#e5534b26;border:1px solid #e5534b80;color:#ffb4ae;font:11px/1.4 Consolas,monospace;white-space:pre-wrap;word-break:break-word;max-height:120px;overflow:auto}
+.vdraw-err[hidden],.vdraw-dirty[hidden]{display:none}
+.vdraw-btns{align-items:center}
+.vdraw-dirty{font-size:11px;color:#f5c518}
+
+/* markers on the ruler (line runs down over the tracks) */
+.ruler .vmk{position:absolute;top:0;width:12px;height:24px;margin-left:-6px;cursor:pointer;z-index:1}
+.ruler .vmk::before{content:"";position:absolute;left:1px;top:2px;width:10px;height:12px;background:#f5c518;clip-path:polygon(0 0,100% 0,100% 65%,50% 100%,0 65%)}
+.ruler .vmk::after{content:"";position:absolute;left:6px;top:24px;width:1px;height:176px;background:#f5c51870;pointer-events:none}
+.ruler .vmk:hover::before{background:#ffe066}
+.vfit-btn{padding:2px 9px;font-size:12px}
+
+/* export dialog */
+.vx-card{width:min(480px,92vw)}
+.vx-card .row{grid-template-columns:96px 1fr}
+.vx-info{color:var(--dim);line-height:1.55;font-size:12px;margin:12px 0 14px;min-height:3em}
+.vx-info b{color:#f5c518;font-weight:500}
+.vx-btns{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+/* RTL (ar / ur): the timeline is a time axis, always left to right. Its scroll code uses positive scrollLeft and
+   left:time*zoom, which an RTL scroller clamps / places off-screen. The tools row keeps the page direction. */
+#mvid .tl{direction:ltr}
+:root[dir=rtl] #mvid .tl-tools{direction:rtl}

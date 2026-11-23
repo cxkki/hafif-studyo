@@ -1,0 +1,10 @@
+{
+  "id": "tiktok-oyun",
+  "ad": "TikTok game promo",
+  "aciklama": "Vertical 11 s: gameplay footage, 4 hook captions, a logo at the end and music. For TikTok, Shorts, Reels.",
+  "tur": "video",
+  "kapak": "kapak.png",
+  "sira": 1,
+  "boyut": "1080x1920",
+  "ortak": ["medya/oyun.mp4", "medya/logo.png", "medya/muzik.mp3"]
+}

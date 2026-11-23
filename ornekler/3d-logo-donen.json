@@ -1,0 +1,19 @@
+{
+  "type": "3d",
+  "name": "3d-logo-donen",
+  "agents": { "show": true, "count": 10, "speed": "2x" },
+  "scene": { "background": "#101418", "grid": false, "shadows": true, "light": 2.2 },
+  "camera": { "position": [0, 2.2, 7.5], "target": [0, 1.3, 0], "fov": 45 },
+  "objects": [
+    { "shape": "cylinder", "name": "Kaide", "position": [0, 0.15, 0], "scale": [3.2, 0.3, 3.2], "color": "#1e2430", "metalness": 0.6, "roughness": 0.35, "detail": 48 },
+    { "shape": "torus", "name": "Halka", "position": [0, 1.6, 0], "rotation": [0, 0, 0], "scale": 2.6, "color": "#4f8cff", "metalness": 0.85, "roughness": 0.2, "detail": 48 },
+    { "shape": "cube", "name": "Logo", "position": [0, 1.6, 0], "rotation": [0, 0, 0], "scale": [1.5, 1.5, 0.12], "color": "#ffffff", "roughness": 0.4, "texture": "medya/logo.png" },
+    { "shape": "sphere", "name": "Nokta 1", "position": [1.45, 2.35, 0.3], "scale": 0.22, "color": "#ff7a45", "metalness": 0.3, "roughness": 0.3 },
+    { "shape": "sphere", "name": "Nokta 2", "position": [-1.45, 0.85, 0.3], "scale": 0.22, "color": "#3ecf8e", "metalness": 0.3, "roughness": 0.3 }
+  ],
+  "outputs": [
+    { "kind": "png", "file": "3d-logo.png", "width": 1920, "height": 1080 },
+    { "kind": "spin", "file": "3d-logo-donen.mp4", "seconds": 6, "width": 1080, "height": 1920, "fps": 30 },
+    { "kind": "glb", "file": "3d-logo.glb" }
+  ]
+}

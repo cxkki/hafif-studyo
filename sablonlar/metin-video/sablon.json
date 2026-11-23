@@ -1,0 +1,10 @@
+{
+  "id": "metin-video",
+  "ad": "Quote video",
+  "aciklama": "Vertical 10 s: dark gradient background, a quote typed letter by letter, a signature below and music.",
+  "tur": "video",
+  "kapak": "kapak.png",
+  "sira": 2,
+  "boyut": "1080x1920",
+  "ortak": ["medya/muzik.mp3"]
+}

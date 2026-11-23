@@ -1,0 +1,90 @@
+[
+  {
+    "id": "tiktok-oyun",
+    "ad": "TikTok game promo",
+    "aciklama": "Vertical 11 s: gameplay footage, 4 hook captions, a logo at the end and music. For TikTok, Shorts, Reels.",
+    "tur": "video",
+    "kapak": "kapak.png",
+    "boyut": "1080x1920",
+    "dosyalar": [
+      "proje.json"
+    ],
+    "ortak": [
+      "medya/oyun.mp4",
+      "medya/logo.png",
+      "medya/muzik.mp3"
+    ]
+  },
+  {
+    "id": "metin-video",
+    "ad": "Quote video",
+    "aciklama": "Vertical 10 s: dark gradient background, a quote typed letter by letter, a signature below and music.",
+    "tur": "video",
+    "kapak": "kapak.png",
+    "boyut": "1080x1920",
+    "dosyalar": [
+      "proje.json",
+      "medya/arka.png"
+    ],
+    "ortak": [
+      "medya/muzik.mp3"
+    ]
+  },
+  {
+    "id": "yatay-tanitim",
+    "ad": "YouTube intro",
+    "aciklama": "Horizontal 8 s: full-screen game/product footage, a big title and subtitle, a logo in the corner, music.",
+    "tur": "video",
+    "kapak": "kapak.png",
+    "boyut": "1920x1080",
+    "dosyalar": [
+      "proje.json"
+    ],
+    "ortak": [
+      "medya/oyun.mp4",
+      "medya/logo.png",
+      "medya/muzik.mp3"
+    ]
+  },
+  {
+    "id": "urun-3d",
+    "ad": "3D product showcase",
+    "aciklama": "A product box with your logo on a pedestal; lighting and camera ready. Outputs: 1920×1080 PNG and a 6 s vertical spin video.",
+    "tur": "3d",
+    "kapak": "kapak.png",
+    "dosyalar": [
+      "proje.json"
+    ],
+    "ortak": [
+      "medya/logo.png"
+    ]
+  },
+  {
+    "id": "logo-3d",
+    "ad": "3D spinning logo",
+    "aciklama": "Pedestal, metal ring and a logo slab. Outputs: 1920×1080 PNG, 6 s vertical spin video and GLB model.",
+    "tur": "3d",
+    "kapak": "kapak.png",
+    "dosyalar": [
+      "proje.json"
+    ],
+    "ortak": [
+      "medya/logo.png"
+    ]
+  },
+  {
+    "id": "web-acilis",
+    "ad": "Website launch",
+    "aciklama": "A ready-made promo site (Spark). Agents build it layer by layer on a vertical screen; changes show live as files are edited.",
+    "tur": "web",
+    "kapak": "kapak.png",
+    "boyut": "1080x1920",
+    "dosyalar": [
+      "proje.json",
+      "site/gorsel/pano.svg",
+      "site/index.html",
+      "site/script.js",
+      "site/style.css"
+    ]
+  }
+]

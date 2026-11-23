@@ -1,0 +1,6 @@
+/* Üst çubuk: iş durumu rozeti */
+.jobstate{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.jobstate::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.jobstate.busy{color:var(--ink);border-color:var(--acc)}
+.jobstate.busy::before{background:var(--acc2);animation:hsPulse 1s ease-in-out infinite}
+@keyframes hsPulse{50%{opacity:.3}}

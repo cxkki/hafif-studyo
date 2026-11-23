@@ -1,0 +1,9 @@
+{
+  "id": "logo-3d",
+  "ad": "3D spinning logo",
+  "aciklama": "Pedestal, metal ring and a logo slab. Outputs: 1920×1080 PNG, 6 s vertical spin video and GLB model.",
+  "tur": "3d",
+  "kapak": "kapak.png",
+  "sira": 5,
+  "ortak": ["medya/logo.png"]
+}

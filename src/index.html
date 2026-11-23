@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafif Stüdyo</title>
+<!--CSS-->
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7z" fill="#4f8cff"/><path d="M12 12 21 7M12 12 3 7M12 12v10" stroke="#15171b" stroke-width="1.6" fill="none"/><circle cx="17.5" cy="17.5" r="4.5" fill="#ff7a45"/><path d="m16.2 15.6 3 1.9-3 1.9z" fill="#fff"/></svg>
+    Hafif Stüdyo
+  </div>
+  <nav class="tabs">
+    <button data-tab="m3d" class="on" data-i18n="tab.3d">3D Modeling</button>
+    <button data-tab="mvid" data-i18n="tab.video">Video Editing</button>
+    <button data-tab="mweb" data-i18n="tab.web">Web Build</button>
+  </nav>
+  <div class="spacer"></div>
+  <span id="jobState" class="jobstate" hidden></span>
+  <button id="templatesBtn" data-i18n="top.templates" title="Create a new project from a ready-made template" data-i18n-title="top.templates.title">Templates</button>
+  <button id="runRecipeBtn" data-i18n="top.runRecipe" title="Run a recipe file (.json) with agents" data-i18n-title="top.runRecipe.title">Run recipe</button>
+  <button id="outDirBtn" data-i18n="top.outputs" title="Open the outputs folder" data-i18n-title="top.outputs.title">Outputs</button>
+  <label class="chk" title="Renders at lower resolution and turns shadows off. Keep it on for weak computers." data-i18n-title="top.eco.title"><input type="checkbox" id="eco"> <span data-i18n="top.eco">Eco mode</span></label>
+  <button id="helpBtn" data-i18n="top.help">Shortcuts</button>
+</header>
+
+<main>
+<!-- ===================== 3D ===================== -->
+<section id="m3d" class="mode on">
+  <div class="bar">
+    <button id="d-open" data-i18n="3d.open">Open</button>
+    <button id="d-save" data-i18n="3d.save">Save</button>
+    <button id="d-import" data-i18n="3d.import">Import</button>
+    <details class="menu"><summary data-i18n="3d.export">Export</summary><div class="pop">
+      <button data-exp="obj" data-i18n="3d.export.obj">OBJ (Roblox Studio)</button>
+      <button data-exp="stl" data-i18n="3d.export.stl">STL (3D printer)</button>
+      <button data-exp="glb">GLB</button>
+    </div></details>
+    <div class="sep"></div>
+    <button id="d-undo" title="Ctrl+Z" data-i18n="common.undo">Undo</button>
+    <button id="d-redo" title="Ctrl+Y" data-i18n="common.redo">Redo</button>
+    <div class="sep"></div>
+    <button id="d-png" data-i18n="3d.png">Render image (PNG)</button>
+    <details class="menu"><summary data-i18n="3d.sendToVideo">Send to video</summary><div class="pop">
+      <button data-send="still" data-i18n="3d.send.still">As an image</button>
+      <button data-send="spin" data-i18n="3d.send.spin">Turntable video (6 s)</button>
+    </div></details>
+  </div>
+  <aside class="tools" id="d-tools">
+    <div class="lbl" data-i18n="3d.tools.add">Add</div>
+    <button data-add="cube"><svg viewBox="0 0 24 24"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7.5 12 12l8-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.cube">Cube</span></button>
+    <button data-add="sphere"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="8.5" ry="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span data-i18n="3d.shape.sphere">Sphere</span></button>
+    <button data-add="cylinder"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 6v12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.cylinder">Cylinder</span></button>
+    <button data-add="cone"><svg viewBox="0 0 24 24"><path d="M12 3 5 18c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.cone">Cone</span></button>
+    <button data-add="wedge"><svg viewBox="0 0 24 24"><path d="M3 18h14V7zM17 7l4 3v9l-4-1M17 18h4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.wedge">Ramp</span></button>
+    <button data-add="torus"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="11.5" rx="3.6" ry="1.8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span data-i18n="3d.shape.torus">Torus</span></button>
+    <button data-add="capsule"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.capsule">Capsule</span></button>
+    <button data-add="plane"><svg viewBox="0 0 24 24"><path d="M2 15 9 9h13l-7 6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="3d.shape.plane">Ground</span></button>
+    <div class="lbl" data-i18n="3d.tools.tool">Tool</div>
+    <button data-tmode="translate" class="on" title="G"><span data-i18n="3d.tool.move">Move</span><span class="kbd" style="margin:0">G</span></button>
+    <button data-tmode="rotate" title="R"><span data-i18n="3d.tool.rotate">Rotate</span><span class="kbd" style="margin:0">R</span></button>
+    <button data-tmode="scale" title="S"><span data-i18n="3d.tool.scale">Scale</span><span class="kbd" style="margin:0">S</span></button>
+    <button id="d-snap" title="Snap to grid" data-i18n-title="3d.tool.snap.title" data-i18n="3d.tool.snap">Snap</button>
+  </aside>
+  <div class="vp" id="d-vp">
+    <div class="vp-ov">
+      <button data-view="persp" data-i18n="3d.view.persp">Perspective</button>
+      <button data-view="front"><span data-i18n="3d.view.front">Front</span> <span class="kbd" style="margin:0">1</span></button>
+      <button data-view="right"><span data-i18n="3d.view.side">Side</span> <span class="kbd" style="margin:0">3</span></button>
+      <button data-view="top"><span data-i18n="3d.view.top">Top</span> <span class="kbd" style="margin:0">7</span></button>
+      <button id="d-wire" data-i18n="3d.view.wire">Wireframe</button>
+    </div>
+    <div class="vp-hint" data-i18n="3d.hint">Left click: select · Drag: orbit · Right drag: pan · Wheel: zoom</div>
+  </div>
+  <aside class="side">
+    <div class="sec"><h3 data-i18n="3d.scene">SCENE</h3><ul class="outl" id="d-outl"></ul></div>
+    <div class="sec" id="d-props"></div>
+  </aside>
+</section>
+
+<!-- ===================== VIDEO ===================== -->
+<section id="mvid" class="mode">
+  <div class="bar">
+    <button id="v-import" data-i18n="video.addMedia">Add media</button>
+    <button id="v-text" data-i18n="video.addText">Add text</button>
+    <div class="sep"></div>
+    <button id="v-split" title="S" data-i18n="video.split">Split</button>
+    <button id="v-del" title="Delete" data-i18n="common.delete">Delete</button>
+    <button id="v-undo" title="Ctrl+Z" data-i18n="common.undo">Undo</button>
+    <button id="v-redo" title="Ctrl+Y" data-i18n="common.redo">Redo</button>
+    <div class="spacer"></div>
+    <select id="v-res" title="Video size" data-i18n-title="video.res.title" style="width:auto">
+      <option value="1080x1920" data-i18n="video.res.vertical">Vertical 1080×1920 (TikTok, Shorts)</option>
+      <option value="1920x1080" data-i18n="video.res.horizontal">Horizontal 1920×1080 (YouTube)</option>
+      <option value="1280x720" data-i18n="video.res.light">Horizontal 1280×720 (light)</option>
+      <option value="1080x1080" data-i18n="video.res.square">Square 1080×1080</option>
+    </select>
+    <button id="v-export" class="pri" data-i18n="video.export">Export video</button>
+  </div>
+  <aside class="side lib">
+    <div class="drop" id="v-drop"><span data-i18n="video.drop">Drop video, audio or image files here</span><br><span data-i18n="video.drop.click">or click</span></div>
+    <div class="mlist" id="v-mlist"></div>
+  </aside>
+  <div class="prev">
+    <div class="stage"><canvas id="v-canvas" width="540" height="960"></canvas></div>
+    <div class="transport">
+      <button id="v-start" title="Home">⏮</button>
+      <button id="v-play" class="pri" style="min-width:74px" title="Space" data-i18n-title="video.play.title" data-i18n="video.play">Play</button>
+      <div class="tc"><b id="v-now">00:00.00</b> / <span id="v-total">00:00.00</span></div>
+      <select id="v-q" title="Preview quality (does not affect export)" data-i18n-title="video.quality.title" style="width:auto">
+        <option value="0.25" data-i18n="video.quality.25">Preview 25%</option>
+        <option value="0.5" data-i18n="video.quality.50">Preview 50%</option>
+        <option value="1" data-i18n="video.quality.100">Preview 100%</option>
+      </select>
+    </div>
+  </div>
+  <aside class="side vprops" id="v-props"></aside>
+  <div class="tl">
+    <div class="tl-tools">
+      <span style="color:var(--dim)" data-i18n="video.zoom">Zoom</span><input type="range" id="v-zoom" min="10" max="300" value="60">
+      <label class="chk"><input type="checkbox" id="v-snapchk" checked> <span data-i18n="video.snap">Snap</span></label>
+      <div class="spacer"></div>
+      <span style="color:var(--dim)" data-i18n="video.dragHint">Drag files from the library to the timeline</span>
+    </div>
+    <div class="tl-heads"><div data-i18n="video.track.text">Text</div><div data-i18n="video.track.overlay">Overlay</div><div data-i18n="video.track.main">Main video</div><div data-i18n="video.track.audio">Audio</div></div>
+    <div class="tl-scroll" id="v-tls"><div class="tl-inner" id="v-tli">
+      <div class="ruler" id="v-ruler"></div>
+      <div class="track" data-track="t"></div>
+      <div class="track" data-track="v2"></div>
+      <div class="track" data-track="v1"></div>
+      <div class="track" data-track="a"></div>
+      <div class="playhead" id="v-ph"></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== WEB (filled by web-mode.js) ===================== -->
+<section id="mweb" class="mode"></section>
+</main>
+
+<footer class="status"><span id="st-left"></span><div class="spacer"></div><span id="st-right"></span></footer>
+<div id="toast" role="status"></div>
+
+<div class="ovl" id="busy" hidden><div class="card">
+  <h2 id="busyTitle" data-i18n="busy.working">Working</h2>
+  <div class="pbar"><div id="busyBar"></div></div>
+  <div id="busyText" class="empty"></div>
+  <div style="margin-top:14px;text-align:right"><button id="busyCancel" data-i18n="common.cancel">Cancel</button></div>
+</div></div>
+
+<div class="ovl" id="help" hidden><div class="card">
+  <h2 data-i18n="help.title">Shortcuts</h2>
+  <h4 data-i18n="tab.3d">3D Modeling</h4>
+  <div class="keys">
+    <b>G / R / S</b><span data-i18n="help.3d.grs">Move / Rotate / Scale</span>
+    <b>X, Delete</b><span data-i18n="help.3d.delete">Delete selected object</span>
+    <b>Shift+D</b><span data-i18n="help.3d.duplicate">Duplicate</span>
+    <b>F</b><span data-i18n="help.3d.focus">Focus selected object</span>
+    <b>H</b><span data-i18n="help.3d.hide">Hide / show</span>
+    <b>1 / 3 / 7</b><span data-i18n="help.3d.views">Front / Side / Top view</span>
+    <b>Ctrl+Z / Ctrl+Y</b><span data-i18n="help.undoRedo">Undo / Redo</span>
+    <b>Esc</b><span data-i18n="help.3d.deselect">Deselect</span>
+  </div>
+  <h4 data-i18n="tab.video">Video Editing</h4>
+  <div class="keys">
+    <b data-i18n="help.key.space">Space</b><span data-i18n="help.video.play">Play / Pause</span>
+    <b>S</b><span data-i18n="help.video.split">Split at playhead</span>
+    <b>Delete</b><span data-i18n="help.video.delete">Delete selected clip</span>
+    <b>Ctrl+D</b><span data-i18n="help.video.duplicate">Duplicate clip</span>
+    <b>← / →</b><span data-i18n="help.video.step">1 frame back / forward (Shift: 1 second)</span>
+    <b>Home</b><span data-i18n="help.video.home">Go to start</span>
+    <b>Shift+Delete</b><span data-i18n="help.video.ripple">Ripple delete (close the gap)</span>
+    <b>J / K / L</b><span data-i18n="help.video.shuttle">Play backward / Stop / Play forward (press again: faster)</span>
+    <b>M</b><span data-i18n="help.video.marker">Add / remove marker</span>
+    <b>Shift+Z</b><span data-i18n="help.video.fit">Zoom timeline to fit</span>
+    <b>Ctrl+Z / Ctrl+Y</b><span data-i18n="help.undoRedo">Undo / Redo</span>
+  </div>
+  <h4 data-i18n="help.general">General</h4>
+  <div class="keys">
+    <b>Ctrl+K</b><span data-i18n="help.palette">Command palette</span>
+    <b>AI</b><span data-i18n="help.ai">Open the AI assistant (top right)</span>
+  </div>
+  <div style="text-align:right"><button id="helpClose" class="pri" data-i18n="common.ok">OK</button></div>
+</div></div>
+
+
+<!--NEUTRALINO-->
+<!--JS-->
+</body>
+</html>

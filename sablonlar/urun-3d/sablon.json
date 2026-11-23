@@ -1,0 +1,9 @@
+{
+  "id": "urun-3d",
+  "ad": "3D product showcase",
+  "aciklama": "A product box with your logo on a pedestal; lighting and camera ready. Outputs: 1920×1080 PNG and a 6 s vertical spin video.",
+  "tur": "3d",
+  "kapak": "kapak.png",
+  "sira": 4,
+  "ortak": ["medya/logo.png"]
+}

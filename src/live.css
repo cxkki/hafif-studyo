@@ -1,0 +1,18 @@
+/* ---------- Canlı proje (live.js) ---------- */
+/* Üstte "Claude:" balonu: koyu yarı saydam hap, en fazla 2 satır. Sürekli animasyon yok (yalnızca giriş/çıkış geçişi). */
+.lv-note{position:fixed;left:50%;top:58px;z-index:2147483002;transform:translate(-50%,-6px);max-width:min(620px,calc(100vw - 32px));
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+  padding:8px 16px;border-radius:18px;background:rgba(16,18,23,.82);border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 10px 28px rgba(0,0,0,.45);color:#e5e7eb;font-size:13px;line-height:1.4;text-align:center;
+  pointer-events:none;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s}
+.lv-note.show{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .2s ease,transform .2s ease}
+.lv-note b{color:#c4b5fd;font-weight:600;margin-right:6px}
+
+/* Üst çubuk: canlı rozet ve düğmeler */
+.lv-badge{display:inline-flex;align-items:center;gap:6px;max-width:220px;overflow:hidden;text-overflow:ellipsis;
+  border-radius:999px;border-color:rgba(62,207,142,.45);background:rgba(62,207,142,.1);color:#d1fae5;padding:4px 11px}
+.lv-badge:hover{background:rgba(62,207,142,.18);border-color:rgba(62,207,142,.7)}
+.lv-badge::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.lv-badge span{overflow:hidden;text-overflow:ellipsis}
+.lv-busy.lv-badge::before{background:var(--acc2)}
+.lv-badge[hidden]{display:none}

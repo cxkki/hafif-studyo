@@ -1,0 +1,19 @@
+/* Command palette + language picker (palette.js) */
+.pal-ovl{align-items:start;padding-top:12vh;z-index:110}
+.pal-card{width:min(560px,94vw);max-height:70vh;display:flex;flex-direction:column;padding:0;overflow:hidden}
+.pal-in{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:14px 16px;font-size:15px;user-select:text;outline:none}
+.pal-list{overflow:auto;padding:6px;margin:0;list-style:none}
+.pal-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:7px;cursor:pointer}
+.pal-item.sel{background:var(--panel2);box-shadow:inset 2px 0 var(--acc)}
+.pal-item .pal-t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pal-item .pal-g{font-size:11px;color:var(--dim)}
+.pal-item mark{background:transparent;color:var(--acc);font-weight:600}
+.pal-empty{padding:18px;text-align:center;color:var(--dim)}
+.pal-foot{border-top:1px solid var(--line);padding:6px 12px;color:var(--dim);font-size:11px}
+.lang-wrap{position:relative}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:5px 8px}
+.lang-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:95;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px;max-height:70vh;overflow:auto;min-width:170px;box-shadow:0 8px 24px #0008}
+.lang-menu[hidden]{display:none}
+.lang-menu button{display:flex;width:100%;border:0;background:transparent;text-align:left;gap:8px;padding:6px 10px}
+.lang-menu button.on{color:var(--acc)}
+.lang-menu button:hover{background:var(--panel2)}

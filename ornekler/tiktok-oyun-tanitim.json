@@ -1,0 +1,25 @@
+{
+  "type": "video",
+  "name": "tiktok-oyun-tanitim",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "background": "#0b0d10",
+  "agents": { "show": true, "count": 12, "speed": "2x" },
+  "media": {
+    "oyun": "medya/oyun.mp4",
+    "logo": "medya/logo.png",
+    "muzik": "medya/muzik.mp3"
+  },
+  "clips": [
+    { "media": "oyun", "track": "v1", "start": 0, "duration": 11, "in": 0.5, "fit": "cover", "volume": 0, "fadeIn": 0.3, "fadeOut": 0.6 },
+    { "media": "logo", "track": "v2", "start": 8.5, "duration": 2.5, "scale": 0.35, "y": 0.02, "fadeIn": 0.4 }
+  ],
+  "texts": [
+    { "text": "BU OYUNU\nKİMSE BİTİREMİYOR", "start": 0, "duration": 2.4, "size": 9, "color": "#ffffff", "stroke": true, "anim": "pop", "y": -0.28 },
+    { "text": "Her seviye daha zor 😈", "start": 2.6, "duration": 2.6, "size": 6.5, "color": "#ffe14d", "stroke": true, "anim": "slide", "y": 0.3 },
+    { "text": "Sen kaçıncı seviyeye\nkadar gidebilirsin?", "start": 5.4, "duration": 3, "size": 6.5, "color": "#ffffff", "stroke": true, "box": true, "boxColor": "#000000", "anim": "type", "y": 0.25 },
+    { "text": "Şimdi oyna 👇", "start": 8.5, "duration": 2.5, "size": 8, "color": "#3ef08e", "stroke": true, "anim": "pop", "y": 0.28 }
+  ],
+  "music": { "media": "muzik", "volume": 0.7, "fadeIn": 0.3, "fadeOut": 1.5 },
+  "output": { "file": "tiktok-oyun-tanitim.mp4" }
+}

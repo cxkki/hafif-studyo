@@ -1,0 +1,10 @@
+{
+  "id": "yatay-tanitim",
+  "ad": "YouTube intro",
+  "aciklama": "Horizontal 8 s: full-screen game/product footage, a big title and subtitle, a logo in the corner, music.",
+  "tur": "video",
+  "kapak": "kapak.png",
+  "sira": 3,
+  "boyut": "1920x1080",
+  "ortak": ["medya/oyun.mp4", "medya/logo.png", "medya/muzik.mp3"]
+}
